@@ -1,3 +1,13 @@
 $(function(){
-	
+	$(".title").click(function(){
+		$.ajax({
+			type:"post",
+			url:"/list",
+			data:{name:"yulong"},
+			dataType:"json",
+			success:function(data){
+				alert(data);
+			}
+		});
+	});
 });
