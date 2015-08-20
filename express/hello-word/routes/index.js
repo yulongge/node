@@ -3,9 +3,9 @@ module.exports = function(app){
 		res.send('hello world!');
 	});
 	app.get('/customer',function(req,res){
-                res.send('customer page!');
-        });
+        res.send('customer page!');
+    });
 	app.get('/admin',function(req,res){
-                res.send('admin page!');
-        });
+        res.send('admin page!');
+    });
 }
