@@ -4,5 +4,6 @@ var app = express();
 //app.get('/',function(req,res){
 //	res.send('hello world!');
 //});
-var routes = require("./routes")(app);
+//var routes = require("./routes")(app);
+var 
 app.listen(9999);
