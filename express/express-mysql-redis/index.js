@@ -12,14 +12,14 @@ var pool = mysql.createPool({
 	port:3307,
 	database:'node',
 	user:'root',
-	password:'root'
+	password:''
 });
 var connection = mysql.createConnection({
 	host:"127.0.0.1",
 	port:3307,
 	database:"node",
 	user:"root",
-	password:"root"
+	password:""
 });
 
 app.set('view engine','jade');
@@ -39,9 +39,31 @@ app.get('/',function(req,res){
 app.post("/list",function(req,res){
 	//console.log(res);
 	console.log("list comming....");
-	connection.connect(function(err){
+	pool.getConnection(function(err,connection){
+		if(err) res.send("连接失败");
+		else
+			var str;
+			var sqlstr = 'select * from ??';
+			connection.query(sqlstr,['user'],function(err,result){
+				if(err) console.log("查询失败。");
+				else{
+					console.log(result);
+					//connection.end();
+					//res.send(result);
+					res.render('listItem',{userList:result,layout:false},function(err,html){
+						console.log(html);
+						res.send(html);
+						connection.release();
+					});
+					
+				}
+			});
+
+	});
+	/*connection.connect(function(err){
 		if(err) console.log("连接失败。");
 		else{
+
 			console.log("连接成功。");
 			var sqlstr = 'select * from ??';
 			connection.query(sqlstr,['user'],function(err,result){
@@ -51,6 +73,7 @@ app.post("/list",function(req,res){
 					//connection.end();
 				}
 			});
+			return;
 			var insersql = 'insert into user set ?';
 			connection.query(insersql,{name:'lingling',phonenumber:'1888888888'},function(err,result){
 				if(err) console.log("插入数据失败！");
@@ -59,13 +82,14 @@ app.post("/list",function(req,res){
 						if(err) console.log("查询失败。");
 						else{
 							console.log(result);
+							res.send(result);
 							connection.end();
 						}
 					});
 				}
 			})
 		}
-	});
+	});*/
 	res.on('data',function(data){
 		console.log("coming.....");
 		//var param = JSON.parse(data.toString());

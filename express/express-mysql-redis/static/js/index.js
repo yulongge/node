@@ -4,9 +4,9 @@ $(function(){
 			type:"post",
 			url:"/list",
 			data:{name:"yulong"},
-			dataType:"json",
+			dataType:"html",
 			success:function(data){
-				alert(data);
+				$(".list").append(data);
 			}
 		});
 	});
