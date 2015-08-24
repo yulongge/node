@@ -431,3 +431,26 @@ this is an article written in markdown
   </body>
 </html>
 ```
+##Inheritance
+```javascript
+html
+	head
+		title My Site - #{title}
+		block scripts
+			script(src='/jquery.js')
+	body
+		block content
+		block foot
+			#footer
+				p some footer content
+```
+```javascript
+extends ./layout.jade
+block scripts
+	script(src='./jquery.js')
+	script(src='./pets.js')
+block content
+	h1=title
+	each pet in pets
+		include pet
+```
