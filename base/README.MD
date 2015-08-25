@@ -1,5 +1,5 @@
 #base
-##console
+##1)console
 ###1:console.log
 ###2:console.error(console.warn)
 
@@ -24,20 +24,20 @@ setTimeout(function(){
 	console.timeEnd("small loop");
 },1000);
 ```
-###console.trace()
+###5:console.trace()
 输出当前位置的栈信息
 
-###console.assert()
+###6:console.assert()
 对表达式的结果进行评估(抛出异常)
 ``` javascript
 console.assert(1==2,'raise an exception');
 ```
 
-##global
-###global
-###setTimeout&clearTimeout
-###setInterval&clearInterval
-###unref&ref
+##2)global
+###1:global
+###2:setTimeout&clearTimeout
+###3:setInterval&clearInterval
+###4:unref&ref
 让定时器暂停，启动
 ``` javascript
 var testFunction=function(){
@@ -51,7 +51,7 @@ setTimeout(function(){
 	timer.unref();
 },10000);
 ```
-###require
+###5:require
 ####require.resolve
 查询完整模块名
 ``` javascript
