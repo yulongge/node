@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import
+	"reset.scss";
+.con{
+  width:94%;
+  height: auto;
+  margin: 0 auto;
+}
+.banner{
+	width:100%;
+	height: 117px;
+  .con{
+  	height: 100%;
+  	border-bottom: 1px solid #d8d8d8;
+  	margin: 0 auto;
+    .icon{
+    	width: 60px;
+    	height: 60px;
+      i{
+      	display: inline-block;
+      	width: 100%;
+      	height: 100%;
+      	border-radius: 50%;
+      	-webkit-border-radius: 50%;
+      	-moz-border-radius: 50%;
+      	background: #494949;
+      }
+    };
+    .msg{
+      margin-left:16px;
+      i{
+        display: block;
+        font-size: 1.5rem;
+      };
+      .name{
+        color: #333333;
+        line-height: 30px;
+      };
+      .ins{
+        color: #999999;
+        font-size: 1.25rem;
+        line-height: 25px;
+      }
+    }
+  };
+  span{
+  	display: block;
+    float:left;
+  	height: 60px;
+  	position: relative;
+  	top:50%;
+  	margin-top: -30px;
+  }
+}
+.title{
+  width: 100%;
+  height: auto;
+  .con{
+    color: #333333;
+    font-size: 2.5rem;
+    margin-top:50px;
+    margin-bottom: 50px;
+    font-family: "华文黑体";
+    line-height: 3rem;
+  }
+}
+.content{
+  width: 100%;
+  height: auto;
+  .con{
+    margin:0 auto;
+    .article{
+      margin-bottom: 25px;
+      p{
+        font-size: 1.75rem;
+        line-height: 1.4;
+        color: #666666;
+      }
+    };
+    .card{
+      margin-bottom: 25px;
+      width:100%;
+      background:#4bbb00;
+      img{
+        width:100%;
+      }
+    };
+    .img{
+      margin-bottom: 25px;
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+.footer{
+  position: fixed;
+  bottom:0px;
+  width: 100%;
+  height: 88px;
+  border-top:1px solid #e8e8e8;
+  background:#ffffff;
+  opacity: 0.9;
+  .con{
+    position: relative;
+    height: 100%;
+    i{
+      display: inline-block;
+      position: absolute;
+    };
+    .share{
+      width: 27px;
+      height: 33px;
+      left:25px;
+      background: url("./share.png");
+      top:50%;
+      margin-top:-16px;
+    };
+    .support{
+      width: 31px;
+      height: 27px;
+      right:25px;
+      background: url("./support.png");
+      top:50%;
+      margin-top:-14px;
+    };
+    .num{
+      width:20px;
+      height: 20px;
+      right:0px;
+      top:50%;
+      margin-top:-4px;
+      font-size: 1.3em;
+      color: #6f6f6f;
+    }
+  }
+
+}
+.vTitle{
+  .con{
+    font-size: 3.12rem;
+  }
+}
+.content .ifcon{
+  width:100%;
+  margin-bottom: 50px;
+  iframe{
+    width:100%;
+    height: 422px;
+  }
+}
